@@ -20,4 +20,14 @@ return this.shufflepassword(password);
     }
 }
 let pass=new PasswordGenerator();
-console.log(pass.password());
+function generatePassword(){
+    let value=pass.password();
+    let password=document.getElementById("password");
+    password.value=value;
+    console.log(value);
+}
+let button=document.getElementById("gen");
+button.addEventListener("click",generatePassword);
+//can use FISHER-YATES ALGORITHM 
+//can use KNUTH SHUFFLE ALGORITHM
+//can take length of password from user and generate password accordingly
